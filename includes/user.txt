@@ -1,0 +1,36 @@
+
+Educators (userType = educator)
+-------------------------------
+Name:Layla
+Email: educator1@gmail.com
+Password: 123
+Photo: user1.png
+Topics: Programming, AI Basics
+
+name:omar
+Email: educator2@gmail.com
+Password: 123
+Photo: user2.png
+Topics: Networking, Databases
+
+
+
+name:tala
+Email: tala@gmail.com
+Password: 12345
+Photo: defult.png
+
+
+
+Learners (userType = learner)
+-----------------------------
+name:mariah
+Email: mariah@gmail.com
+Password: 12345
+Photo: mariah.png
+
+
+name:sarah
+Email: learner2@gmail.com
+Password: 12345
+Photo: defult.png

@@ -1,0 +1,79 @@
+:root{
+  --green-700:#0F2A1D;
+  --green-400:#375534;
+  --green-300:#6B9071;
+  --green-200:#AEC3B0;
+  --green-100:#E3EED4;
+  --text:#0F2A1D;
+  --radius:14px;
+  --shadow:0 10px 24px rgba(15,42,29,.10);
+  --container:1160px;
+}
+
+/* Base */
+*{box-sizing:border-box}
+html,body{
+  margin:0;
+  font-family:"Tajawal",system-ui,Arial,sans-serif;
+  color:var(--text);
+  background:linear-gradient(#f6fbf5,var(--green-100));
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+
+/* Layout */
+.container{max-width:var(--container);margin:auto;padding:24px}
+
+/* Header/Footer embeds */
+.include{display:block;width:100%;border:0}
+.include-header{height:90px}
+.include-footer{height:140px}
+
+/* Card */
+.card{
+  background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);
+  padding:20px;margin:auto;border:1px solid var(--green-200);
+}
+.card.narrow{max-width:720px}
+
+.page-title{margin:0 0 12px 0;font-size:1.4rem;color:var(--green-700)}
+
+/* Form */
+.q-form{display:grid;gap:16px}
+.field{display:grid;gap:8px}
+.field.inline{grid-template-columns:180px 1fr; align-items:center}
+label{font-weight:700}
+.hint{color:#587266}
+
+input[type="text"],
+input[type="file"],
+select,
+textarea{
+  width:100%;
+  padding:10px 12px;
+  border:1px solid var(--green-200);
+  border-radius:10px;
+  background:#fff;
+  outline:none;
+}
+textarea{resize:vertical; min-height:120px}
+
+/* Answers in a tidy grid on wide screens */
+.grid{
+  display:grid;
+  gap:12px;
+}
+@media (min-width:700px){
+  .grid{ grid-template-columns:1fr 1fr; }
+}
+
+/* Buttons */
+.actions{display:flex;gap:12px;justify-content:flex-end;margin-top:6px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:.6rem 1.1rem;border-radius:999px;border:1px solid transparent;
+  text-decoration:none;cursor:pointer;
+}
+.btn.primary{background:var(--green-400);border-color:var(--green-400);color:#fff}
+.btn.secondary{background:#fff;border-color:var(--green-300);color:var(--green-400)}
+.btn:hover{filter:brightness(.98)}

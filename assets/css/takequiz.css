@@ -1,0 +1,27 @@
+:root{
+  --brand-700:#0F2A1D; --brand-500:#3A6B46; --brand-400:#6B9071;
+  --brand-200:#AEC3B0; --brand-100:#E3EED4;
+  --ink:#0f172a; --muted:#6b7280; --shadow:0 10px 24px rgba(15,42,29,.10);
+}
+*{box-sizing:border-box}
+html,body{margin:0;font-family:"Tajawal",system-ui,Arial,sans-serif;background:linear-gradient(#f6fbf5,var(--brand-100));color:var(--ink)}
+
+.quiz-wrap { max-width: 900px; margin: 32px auto; padding: 0 16px; }
+.quiz-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.quiz-edu { display: flex; align-items: center; gap: 10px; }
+.quiz-edu img { width: 80px; height: 80px; border-radius: 50%; border: 2px solid var(--brand-200); object-fit: cover; }
+.quiz-count { color: var(--muted); margin: 6px 0 14px; font-weight: 600; }
+
+.quiz-card { background: #fff; color: var(--ink); border: 1px solid var(--brand-200); border-radius: 12px; padding: 20px; box-shadow: var(--shadow); margin: 10px 0; }
+.q-figure { display: block; max-width: 100%; height: auto; margin: 0 auto 15px; }
+
+.option { display: block; margin: 12px 0; padding: 12px; border: 2px solid var(--brand-200); border-radius: 10px; background: #fff; cursor: pointer; transition: border-color .2s, box-shadow .2s, transform .05s; position: relative; }
+.option input { position: absolute; opacity: 0; }
+.option:has(input:checked) { border-color: var(--brand-400); box-shadow: 0 0 0 3px rgba(107,144,113,.28); }
+.option:active{ transform:translateY(1px); }
+
+.quiz-submit { display: flex; justify-content: center; margin: 16px 0 24px; }
+.btn-submit { padding: 12px 22px; border-radius: 12px; border: 1px solid var(--brand-700); background: var(--brand-700); color: #fff; font-weight: 800; cursor: pointer; box-shadow: var(--shadow); transition: filter .15s, transform .05s, box-shadow .15s; }
+.btn-submit:hover { filter: brightness(.98); }
+.btn-submit:active{ transform:translateY(1px); box-shadow:0 6px 16px rgba(15,42,29,.12); }
+.btn-submit:focus-visible{ outline:0; box-shadow:0 0 0 3px rgba(107,144,113,.28); }

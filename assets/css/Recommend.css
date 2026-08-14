@@ -1,0 +1,93 @@
+:root{
+  --green-700:#0F2A1D;
+  --green-600:#143726;
+  --green-400:#375534;
+  --green-300:#6B9071;
+  --green-200:#AEC3B0;
+  --green-100:#E3EED4;
+  --text:#0F2A1D;
+  --radius:14px;
+  --shadow:0 10px 24px rgba(15,42,29,.10);
+  --container:1160px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:"Tajawal",system-ui,Arial,sans-serif;
+  background:linear-gradient(#f6fbf5,var(--green-100));
+  color:var(--text);
+}
+a{text-decoration:none;color:inherit}
+
+/* ===== HEADER ===== */
+.tk-header{
+  background:linear-gradient(180deg,var(--green-700),var(--green-600));
+  color:#fff;
+  box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+.tk-wrap{
+  max-width:var(--container);
+  margin:auto;
+  padding:14px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.tk-brand{display:flex;flex-direction:column;line-height:1.2}
+.tk-brand-text strong{font-weight:900}
+.nav-btn{
+  background:#fff;
+  color:var(--green-700);
+  padding:.6rem 1rem;
+  border:1px solid var(--green-300);
+  border-radius:10px;
+  font-weight:700;
+  transition:.2s;
+}
+.nav-btn:hover{background:var(--green-300);color:#fff}
+
+.container{max-width:var(--container);margin:32px auto;padding:0 16px}
+.card{
+  background:#fff;
+  border-radius:var(--radius);
+  padding:20px;
+  border:1px solid var(--green-200);
+  box-shadow:var(--shadow);
+}
+.page-title{color:var(--green-700);margin-bottom:10px}
+
+.q-form{display:grid;gap:16px}
+.field{display:grid;gap:8px}
+.field.inline{grid-template-columns:180px 1fr;align-items:center}
+label{font-weight:700}
+
+input[type="text"],input[type="file"],select,textarea{
+  width:100%;
+  font:inherit;
+  padding:10px 12px;
+  border:1px solid var(--green-200);
+  border-radius:10px;
+  background:#fff;
+  outline:none;
+}
+textarea{resize:vertical; min-height:120px}
+
+.grid{display:grid;gap:12px}
+@media (min-width:700px){.grid{grid-template-columns:1fr 1fr}}
+
+.actions{display:flex;gap:12px;justify-content:flex-end;margin-top:6px}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:.6rem 1.1rem;
+  border-radius:999px;
+  border:1px solid transparent;
+  cursor:pointer;
+  font-weight:700;
+}
+.btn.primary{background:var(--green-400);border-color:var(--green-400);color:#fff}
+.btn.secondary{background:#fff;border-color:var(--green-300);color:var(--green-400)}
+.btn:hover{filter:brightness(.98)}
+
+

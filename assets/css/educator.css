@@ -1,0 +1,216 @@
+/* ===== Base ===== */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap');
+
+:root{
+
+  --ink:#1f2937;         
+  --muted:#6b7280;        
+   --bg:#E3EED4;            
+  --card:#ffffff;        
+  --line:#d1d5db;        
+  --thead:#e5edf8;       
+  --accent:#2b6cb0;       
+  --accent-2:#10b981;     
+  --danger:#ef4444;      
+}
+
+
+*{box-sizing:border-box}
+html,body{margin:0;}
+body{background:var(--bg);color:var(--ink)}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+
+.row-eq{
+  display: 
+  grid-template-columns:minmax(0,1fr);
+  gap: 20px;
+  align-items: stretch;              
+}
+
+.row-eq > .card{
+  display: flex !important;
+  flex-direction: column;
+                      
+  width: auto;                       
+  float: none !important;             
+}
+
+
+
+
+/* ===== Layout ===== */
+.link{font-weight:600}
+main{max-width:1100px;margin:24px auto;padding:0 16px}
+.grid{display:grid;gap:16px}
+.grid-2{grid-template-columns:1fr 1fr}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:16px;
+  box-shadow:0 4px 10px rgba(0,0,0,.03);
+}
+h2{color:#111827;margin:0 0 10px;}
+
+/* ===== User card ===== */
+#user-name{font-size:22px;font-weight:450}
+#user-email{font-size:19px;font-weight:450}
+#Educator-specialty{font-size:19px;}
+.usercard   {display: flex;                
+  align-items: center;
+  border:1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px 15px;
+  width:600px;           
+  background: #fff;
+  box-shadow:0 4px 10px rgba(0,0,0,.03);
+color:#006400;}
+
+
+
+.usercard img{border:1px solid var(--line);background:#fff};  
+
+
+table{width:100%;border-collapse:collapse;background:var(--card)}
+thead th{
+	
+  background:linear-gradient(180deg, var(--green-700), #143726);
+  border:1px solid var(--line);
+  padding:10px;
+  text-align:left;
+  font-weight:700;
+  color:white;
+  
+}
+td{
+  border:1px solid var(--line);
+  padding:10px;
+  vertical-align:top;
+  
+  
+}
+
+/* ===== Buttons / inputs ===== */
+.btn{display:inline-block;background:var(--accent);color:#fff;border:none;padding:8px 12px;border-radius:8px;cursor:pointer}
+.btn:hover{filter:brightness(1.05)}
+.btn-outline{background:#fff;border:1px solid var(--line);color:var(--ink)}
+.btn-danger{background:var(--danger)}
+
+.input{width:100%;padding:8px;border:1px solid var(--line);border-radius:8px}
+
+/* ===== Question block ===== */
+.q-figure{max-width:150px;border:1px solid var(--line);border-radius:8px;margin-bottom:8px}
+.q-text{font-weight:600;margin-bottom:6px}
+.q-options{margin:0;padding-left:18px}
+.q-options li{margin:2px 0}
+.correct{background:#ecfdf5;border:1px solid #a7f3d0;border-radius:6px;padding:0 4px}
+
+/* little helper rows */
+.meta{color:var(--muted);font-size:.9rem}
+
+
+
+
+html, body{
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+}
+
+.splash{
+  position:fixed; inset:0; z-index:1000;
+  display:grid; place-items:center; overflow:hidden;
+  color:var(--green-700, #0F2A1D);
+}
+
+.splash::before,
+.splash::after{
+  content:""; position:absolute; inset:-20%;
+  background:radial-gradient(1200px 700px at 50% -10%,
+             var(--green-100, #E3EED4), #f6fbf1 40%, #eaf3e0 60%);
+  animation:panBg 8s linear infinite; opacity:.9;
+}
+.splash::after{
+  background:conic-gradient(from 180deg at 50% 40%,
+             rgba(111,171,139,.20), rgba(227,238,212,.0) 25%,
+             rgba(111,171,139,.18) 50%, rgba(227,238,212,.0) 75%,
+             rgba(111,171,139,.15));
+  mix-blend-mode:multiply; filter:blur(6px);
+  animation:spin 9s linear infinite;
+}
+
+.splash .box{
+  position:relative; display:grid; gap:14px; place-items:center; text-align:center;
+  padding:28px 22px; border-radius:24px; background:#ffffffc9;
+  -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px);
+  box-shadow:0 12px 28px rgba(15,42,29,.12);
+}
+
+.splash .logo{
+  width:92px; height:92px; border-radius:20px;
+  background:linear-gradient(135deg, var(--green-300, #6B9071), var(--green-100, #E3EED4));
+  display:grid; place-items:center; color:var(--green-700, #0F2A1D);
+  box-shadow:0 6px 16px rgba(15,42,29,.10);
+  animation:popIn .9s cubic-bezier(.2,.8,.2,1) both;
+}
+.splash-logo-img{
+  width:56px; height:56px; object-fit:contain; display:block;
+}
+
+.splash h1{ margin:2px 0 0; font-size:1.8rem; letter-spacing:.5px;
+  animation:rise .9s .15s cubic-bezier(.16,.84,.44,1) both }
+.splash p{ margin:2px 0 0; max-width:620px; color:#234634; line-height:1.75;
+  animation:fadeIn .8s .35s ease both }
+.splash .skip{ margin-top:10px }
+.btn-skip{
+  background:transparent; border:1px solid #2f5c45; color:#2f5c45;
+  padding:.45rem .9rem; border-radius:999px; cursor:pointer; transition:.2s;
+}
+.btn-skip:hover{ background:#e7f3e3 }
+
+
+.particle{
+  position:absolute; width:10px; height:10px; border-radius:50%;
+  background:var(--green-200, #AEC3B0); filter:blur(.2px); opacity:0;
+}
+
+
+.splash.hide{ opacity:0; transform:scale(1.03);
+  transition:opacity .7s ease, transform .7s ease; pointer-events:none }
+
+
+.page{ clip-path:circle(0% at 50% 50%); opacity:0 }
+.page.reveal{
+  clip-path:circle(150% at 50% 50%); opacity:1;
+  transition:clip-path 1.15s cubic-bezier(.2,.8,.16,1), opacity .8s ease;
+}
+
+
+@media (prefers-reduced-motion: reduce){
+  .splash::before,.splash::after{ animation:none }
+  .splash .logo,.splash h1,.splash p{ animation:none }
+  .page,.page.reveal{ clip-path:none; transition:none }
+}
+
+/* keyframes */
+@keyframes panBg{ to{ transform:translateY(6%) } }
+@keyframes spin{ to{ transform:rotate(1turn) } }
+@keyframes popIn{ 0%{ transform:scale(.6); filter:blur(6px); opacity:0 }
+                  100%{ transform:scale(1); filter:blur(0); opacity:1 } }
+@keyframes rise{ 0%{ transform:translateY(10px); opacity:0 }
+                 100%{ transform:translateY(0); opacity:1 } }
+@keyframes fadeIn{ from{ opacity:0 } to{ opacity:1 } }
+@keyframes burst{
+  0%{ transform:translate(var(--tx), var(--ty)) scale(.8); opacity:0 }
+  25%{ opacity:1 }
+  100%{ transform:translate(calc(var(--tx)*4), calc(var(--ty)*4)) scale(.9); opacity:0 }
+}
+
+
+
+
+
+

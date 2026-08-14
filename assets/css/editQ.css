@@ -1,0 +1,24 @@
+.figure-row{
+  display:grid;
+  gap:16px;
+}
+@media (min-width:700px){
+  .figure-row{
+    grid-template-columns:1fr auto; 
+    align-items:start;
+  }
+}
+
+.current-figure{display:grid;gap:8px;align-content:start}
+.current-figure .label{font-weight:700;color:var(--green-700)}
+.current-figure .preview{
+  width:130px; height:96px;
+  border:1px solid var(--green-200);
+  border-radius:10px; background:#fff;
+  display:flex; align-items:center; justify-content:center;
+  padding:6px;
+  box-shadow:var(--shadow);
+}
+.current-figure .preview img{
+  max-width:100%; max-height:100%; border-radius:8px;
+}
