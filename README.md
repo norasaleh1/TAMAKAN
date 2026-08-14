@@ -386,5 +386,5 @@ Its value comes from combining:
 ---
 
 <p align="center">
-  <img src="assets/tamakan-footer.png" width="100%" alt="TAMAKAN Footer">
+  <img src="assets/images/tamakan-footer1.png" width="100%" alt="TAMAKAN Footer">
 </p>
