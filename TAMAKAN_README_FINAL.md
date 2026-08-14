@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/tamakan-header.png" width="100%" alt="TAMAKAN Header">
+  <img src="assets/images/tamakanlogo.png" width="100%" alt="TAMAKAN Header">
 </p>
 
 # TAMAKAN
@@ -248,15 +248,9 @@ Educator Review
 - AJAX
 - Fetch API
 
-### Development Environment
-
-- MAMP / MySQL-compatible local web server
-
 ---
 
 ## Repository Structure
-
-The GitHub version is organized by responsibility to make the project easier to navigate.
 
 ```text
 TAMAKAN/
@@ -382,34 +376,12 @@ Its value comes from combining:
 
 ---
 
-## Academic & Technical Concepts Demonstrated
-
-The project demonstrates practical implementation of:
-
-- Multi-user web applications
-- Role-based authentication
-- Session management
-- Relational database design
-- CRUD operations
-- Form validation
-- File uploads
-- Quiz scoring logic
-- Dynamic filtering
-- AJAX interactions
-- Asynchronous data requests
-- Feedback collection
-- User-generated content workflows
-
----
-
 ## Team Members
 
-> **Note:** The project files do not contain a reliable team roster, so the names below should be replaced with the final team list before publishing.
-
 - **Nora Alkhudair**
-- **Team Member**
-- **Team Member**
-- **Team Member**
+- **Leen Aldbays**
+- **Maria Alnafisah**
+- **Lamees Alsaleh**
 
 ---
 
